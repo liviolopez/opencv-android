@@ -27,9 +27,9 @@ class ColorSensorAdapter : ListAdapter<SensorColorInfo, BindingViewHolder<*>>(It
     class ItemComparator : DiffUtil.ItemCallback<SensorColorInfo>() {
 
         override fun areItemsTheSame(oldItem: SensorColorInfo, newItem: SensorColorInfo) =
-            oldItem.bitmap == newItem.bitmap
+            oldItem.id == newItem.id
 
-        override fun areContentsTheSame(oldItem: SensorColorInfo, newItem: SensorColorInfo) = oldItem == newItem
+        override fun areContentsTheSame(oldItem: SensorColorInfo, newItem: SensorColorInfo) = oldItem.id == newItem.id
     }
 
     @SuppressLint("SetTextI18n")

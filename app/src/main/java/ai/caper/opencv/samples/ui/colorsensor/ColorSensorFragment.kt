@@ -4,6 +4,7 @@ import ai.caper.opencv.samples.R
 import ai.caper.opencv.samples.databinding.FragmentColorSensorBinding
 import ai.caper.opencv.samples.opencv.ImageUtils.generateBitmapFromDrawable
 import ai.caper.opencv.samples.opencv.OpenCvUtils
+import ai.caper.opencv.samples.opencv.OpenCvUtils.identifyLogo
 import android.os.Bundle
 import android.view.View
 import androidx.fragment.app.Fragment
@@ -26,6 +27,7 @@ class ColorSensorFragment : Fragment(R.layout.fragment_color_sensor) {
         binding.rvSensorColorInfoList.adapter = colorSensorAdapter
 
         analyseLocalImages()
+        identifyLogo()
     }
 
     private fun analyseLocalImages() {
@@ -42,7 +44,12 @@ class ColorSensorFragment : Fragment(R.layout.fragment_color_sensor) {
             R.drawable.nyc_brightness_25,
             R.drawable.nyc_brightness_50,
             R.drawable.nyc_brightness_75,
-            R.drawable.nyc_brightness_100
+            R.drawable.nyc_brightness_100,
+            R.drawable.rect_1,
+            R.drawable.rect_2,
+            R.drawable.rect_3,
+            R.drawable.rect_4,
+            R.drawable.rect_5
         ).map { drawableId ->
             val bitmap = generateBitmapFromDrawable(requireContext(), drawableId)
             OpenCvUtils.analyzePhoto(bitmap)
