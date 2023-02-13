@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    android:label="Price Checker"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="ai.caper.opencv.samples.ui.home.HomeFragment"
+        tools:layout="@layout/fragment_home">
+
+        <action
+            android:id="@+id/action_homeFragment_to_colorSensorFragment"
+            app:destination="@id/colorSensorFragment"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/colorSensorFragment"
+        android:name="ai.caper.opencv.samples.ui.colorsensor.ColorSensorFragment"
+        android:label="Color Sensor"
+        tools:layout="@layout/fragment_color_sensor">
+    </fragment>
+</navigation>

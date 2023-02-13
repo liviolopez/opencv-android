@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">OpenCV Android Samples</string>
+
+    <string name="home_menu">Home Menu</string>
+    <string name="color_sensor">Color Sensor</string>
+    <string name="camera_permissions">It is necessary to grant the camera permissions to scan QR codes.</string>
+
+</resources>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <group
+        android:id="@+id/home_menu">
+
+        <item android:id="@+id/color_sensor"
+              android:title="@string/color_sensor"
+              android:icon="@drawable/ic_color_sensor"
+              app:showAsAction="always"/>
+    </group>
+</menu>
