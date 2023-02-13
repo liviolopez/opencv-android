@@ -37,7 +37,12 @@ class ColorSensorFragment : Fragment(R.layout.fragment_color_sensor) {
             R.drawable.nyc_5,
             R.drawable.nyc_6,
             R.drawable.nyc_7,
-            R.drawable.nyc_8
+            R.drawable.nyc_8,
+            R.drawable.nyc_brightness_0,
+            R.drawable.nyc_brightness_25,
+            R.drawable.nyc_brightness_50,
+            R.drawable.nyc_brightness_75,
+            R.drawable.nyc_brightness_100
         ).map { drawableId ->
             val bitmap = generateBitmapFromDrawable(requireContext(), drawableId)
             OpenCvUtils.analyzePhoto(bitmap)

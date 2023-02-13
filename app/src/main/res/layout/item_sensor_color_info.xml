@@ -19,11 +19,25 @@
         <ImageView
             android:id="@+id/iv_thumbnail"
             android:layout_width="150dp"
-            android:layout_height="150dp"
+            android:layout_height="100dp"
+            android:background="#00ff00"
             android:src="@drawable/ic_broken_link"
             android:textColor="@color/item_text"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/lb_brightness_level"
+            android:textStyle="bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="15dp"
+            android:text="Brightness Level: "
+            android:textColor="@color/item_text"
+            android:textSize="@dimen/description_text_size"
+            app:layout_constraintBottom_toTopOf="@+id/lb_scalar_info"
+            app:layout_constraintStart_toEndOf="@+id/iv_thumbnail" />
 
         <TextView
             android:id="@+id/tv_brightness_level"
@@ -33,20 +47,46 @@
             android:layout_marginStart="10dp"
             android:textColor="@color/item_text"
             android:textSize="@dimen/title_text_size"
-            app:layout_constraintBottom_toTopOf="@+id/tv_scalar_info"
-            app:layout_constraintStart_toEndOf="@+id/iv_thumbnail"
-            tools:text="Picture #1" />
+            app:layout_constraintBottom_toTopOf="@+id/lb_scalar_info"
+            app:layout_constraintStart_toEndOf="@+id/lb_brightness_level"
+            tools:text="10" />
 
         <TextView
-            android:id="@+id/tv_scalar_info"
+            android:id="@+id/lb_scalar_info"
+            android:textStyle="bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="15dp"
+            android:text="Predominant Color: "
+            android:textColor="@color/item_text"
+            android:textSize="@dimen/description_text_size"
+            app:layout_constraintBottom_toTopOf="@+id/tv_predominant_color_info"
+            app:layout_constraintStart_toEndOf="@+id/iv_thumbnail" />
+
+        <View
+            android:id="@+id/tv_predominant_color_preview"
+            android:layout_width="50dp"
+            android:layout_height="0dp"
+            android:background="#ff00ff"
+            android:backgroundTintMode="src_over"
+            android:textColor="@color/item_text"
+            android:textSize="@dimen/title_text_size"
+            app:layout_constraintBottom_toBottomOf="@+id/lb_scalar_info"
+            app:layout_constraintStart_toEndOf="@+id/lb_scalar_info"
+            app:layout_constraintTop_toTopOf="@+id/lb_scalar_info" />
+
+        <TextView
+            android:id="@+id/tv_predominant_color_info"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="15dp"
+            android:layout_marginStart="10dp"
             android:textColor="@color/item_text"
             android:textSize="@dimen/title_text_size"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="@+id/tv_brightness_level"
-            tools:text="Scalar Info" />
+            app:layout_constraintStart_toEndOf="@+id/iv_thumbnail"
+            tools:text="R AA, G 33, B 44" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.cardview.widget.CardView>
